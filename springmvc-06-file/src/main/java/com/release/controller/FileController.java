@@ -22,6 +22,7 @@ import java.net.URLEncoder;
 public class FileController {
 
     /**
+     * 文件上传
      * @param file
      * @param request
      * @return
@@ -70,6 +71,13 @@ public class FileController {
 
     }
 
+    /**
+     * 文件上传 方式二
+     * @param file
+     * @param request
+     * @return
+     * @throws IOException
+     */
     @RequestMapping("/upload2")
     public String fileUpload2(@RequestParam("file") CommonsMultipartFile file, HttpServletRequest request) throws IOException {
 
@@ -88,6 +96,13 @@ public class FileController {
         return "ok";
     }
 
+    /**
+     * 文件下载
+     * @param response
+     * @param request
+     * @return
+     * @throws IOException
+     */
     @RequestMapping("/download")
     public String download(HttpServletResponse response, HttpServletRequest request) throws IOException {
 
